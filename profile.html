@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="shortcut icon" href="img/favicon.svg" type="image/svg+xml">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7b9fdfb84a.js" crossorigin="anonymous"></script>
+
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+
+	<script src="libs/gsap/gsap.min.js" defer></script>
+	<script src="libs/gsap/ScrollTrigger.min.js" defer></script>
+	<script src="libs/gsap/ScrollSmoother.min.js" defer></script>
+
+	<script src="js/app.js" defer></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <header>
+				<a ref="#" id="btn" class="logo">E&E</a>
+				<ul id="navList">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="reservation.html">Reservation</a></li>
+					<li><a href="menu.html">Menu</a></li>
+					<li class="dropdown" id="loggedInDropdown" style="display: none;">
+						<a href="#" id="loggedInLink"><span id="loggedInUser"></span></a>
+						<div class="dropdown-content">
+						  <a href="#" id="profileLink">Профиль</a>
+						  <a href="#" id="logoutLink">Выйти из аккаунта</a>
+						</div> 	
+					</li>
+					<li><a class= "login-btn" id="loginBtn" href="#">Login</a></li>
+				</ul>
+			</header>
+            <div class="blur-bg-overlay"></div>
+			<div class="form-popup">
+				<span class="close-btn material-symbols-rounded">close</span>
+				<div class="form-box login">
+					<div class="form-details">
+						<h2>Welcome Back</h2>
+						<p>Please log in using your personal information to stay connected with us.</p>
+					</div>
+					<div class="form-content">
+						<h2>LOGIN</h2>
+						<form action="#">
+							<div class="input-field">
+								<input type="text"  id="loginInput">
+								<label>login</label>
+							</div>
+							<div class="input-field">
+								<input type="password"  id="passwordInput">
+								<label>Password</label>
+							</div>
+							<button type="submit" id="loginButton">Log In</button>
+						</form>
+						<div class="bottom-link">
+							Don't have an account?
+							<a href="#" id="signup-link">Signup</a>
+						</div>
+					</div>
+				</div>
+				<div class="form-box signup">
+					<div class="form-details">
+						<h2>Create Account</h2>
+						<p>To become a part of our service, please sign up using your personal information.</p>
+					</div>
+					<div class="form-content">
+						<h2>SIGNUP</h2>
+						<form action="#">
+							<div class="input-field">
+								<input type="text"  id="signupLoginInput">
+								<label>Enter your login</label>
+							</div>
+							<div class="input-field">
+								<input type="password" id="signupPasswordInput">
+								<label>Create password</label>
+							</div>
+							<div class="policy-text">
+								<input type="checkbox" id="policy">
+								<label for="policy">
+									I agree the 
+									<a href="#">Terms & Conditions</a>
+								</label>
+							</div>
+							<button type="submit" id="signupButton">Sign Up</button>
+						</form>
+						<div class="bottom-link">
+							Already have an account?
+							<a href="#" id="login-link">Login</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="cardwrapper">
+				<div class="left">
+					<img src="img/user-tie-solid(1).svg" alt="user" width="100">
+					<h4 id="userLogin"></h4>
+				</div>
+				<div class="right">
+					<div class="info">
+						<h3>Profile</h3>
+						<p>Your login: <span id="currentLogin"></span></p>
+					</div>
+				</div>
+			</div>
+			
+        </div>
+    </div>
+</body>
+</html>

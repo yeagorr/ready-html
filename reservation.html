@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/reservationstyle.css">
+
+    <link rel="shortcut icon" href="img/favicon.svg" type="image/svg+xml">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7b9fdfb84a.js" crossorigin="anonymous"></script>
+
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+
+	<script src="libs/gsap/gsap.min.js" defer></script>
+	<script src="libs/gsap/ScrollTrigger.min.js" defer></script>
+	<script src="libs/gsap/ScrollSmoother.min.js" defer></script>
+
+	<script src="js/app.js" defer></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <header>
+                <a ref="#" id="btn" class="logo">E&E</a>
+                <ul id="navList">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Reservation</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li class="dropdown" id="loggedInDropdown" style="display: none;">
+                        <a href="#" id="loggedInLink"><span id="loggedInUser"></span></a>
+                        <div class="dropdown-content">
+                          <a href="profile.html" id="profileLink">Профиль</a>
+                          <a href="#" id="logoutLink">Выйти из аккаунта</a>
+                        </div> 	
+                    </li>
+                    <li><a class= "login-btn" id="loginBtn" href="#">Login</a></li>
+                </ul>
+            </header>
+            <section>
+                <div class="blur-bg-overlay">
+                    <div class="container" id="cont-r">
+                        <div class="container-time">
+                            <h2 class="heading">Time Open</h2>
+                            <h3 class="heading-days">Monday-Friday</h3>
+                            <p>7am - 11pm (breakfast)</p>
+                            <p>11am - 10pm (lunch/dinner)</p>
+                
+                            <h3 clas="heading-days">Saturday and sunday</h3>
+                            <p>9am - 1am (breakfast)</p>
+                            <p>1am - 10pm (lunch/dinner)</p>
+                
+                            <hr>
+                
+                            <h4 class="heading-phone">Call Us: +375 29 241 0813</h4>
+                        </div>
+                        <div class="container-form">
+                            <form action="#" id="reservationForm">
+                                <h2 class="heading heading-yellow">Reservation Online</h2>
+                
+                                <div class="form-field">
+                                    <p>Your Name</p>
+                                    <input type="text" id="nameInput" placeholder="Your Name">
+                                </div>
+                                <div class="form-field">
+                                    <p>Your Email</p>
+                                    <input type="email" id="emailInput" placeholder="Your email">
+                                </div>
+                                <div class="form-field">
+                                    <p>Date</p>
+                                    <input type="date" id="dateInput">
+                                </div>
+                                <div class="form-field">
+                                    <p>Time</p>
+                                    <input type="time" id="timeInput">
+                                </div>
+                                <div class="form-field">
+                                    <p>How many people?</p>
+                                    <select name="select" id="peopleInput">
+                                        <option value="1">1 person</option>
+                                        <option value="2">2 person</option>
+                                        <option value="3">3 person</option>
+                                        <option value="4">4 person</option>
+                                        <option value="5">5 person</option>
+                                        <option value="5+">5+ person</option>
+                                    </select>
+                                </div>
+                
+                                <button class="btn" id="submitBtn">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-popup">
+                    <span class="close-btn material-symbols-rounded">close</span>
+                    <div class="form-box login">
+                        <div class="form-details">
+                            <h2>Welcome Back</h2>
+                            <p>Please log in using your personal information to stay connected with us.</p>
+                        </div>
+                        <div class="form-content">
+                            <h2>LOGIN</h2>
+                            <form action="#">
+                                <div class="input-field">
+                                    <input type="text"  id="loginInput">
+                                    <label>login</label>
+                                </div>
+                                <div class="input-field">
+                                    <input type="password"  id="passwordInput">
+                                    <label>Password</label>
+                                </div>
+                                <button type="submit" id="loginButton">Log In</button>
+                            </form>
+                            <div class="bottom-link">
+                                Don't have an account?
+                                <a href="#" id="signup-link">Signup</a>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="form-box signup">
+                        <div class="form-details">
+                            <h2>Create Account</h2>
+                            <p>To become a part of our service, please sign up using your personal information.</p>
+                        </div>
+                        <div class="form-content">
+                            <h2>SIGNUP</h2>
+                            <form action="#">
+                                <div class="input-field">
+                                    <input type="text"  id="signupLoginInput">
+                                    <label>Enter your login</label>
+                                </div>
+                                <div class="input-field">
+                                    <input type="password" id="signupPasswordInput">
+                                    <label>Create password</label>
+                                </div>
+                                <div class="policy-text">
+                                    <input type="checkbox" id="policy">
+                                    <label for="policy">
+                                        I agree the 
+                                        <a href="#">Terms & Conditions</a>
+                                    </label>
+                                </div>
+                                <button type="submit" id="signupButton">Sign Up</button>
+                            </form>
+                            <div class="bottom-link">
+                                Already have an account?
+                                <a href="#" id="login-link">Login</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <div class="footer">
+                <div class="footer-content">
+                    <h3>Come with family & feel the joy of mouthwatering food</h3>
+                    <p>Join us in the social media to see more about our music</p>
+                    <ul class="socials">
+                        <li><a href="https://www.facebook.com/officialnapalmdeath/"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://www.instagram.com/theofficialnapalmdeath/"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="https://twitter.com/officialND"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://www.youtube.com/@napalmdeathofficial"><i class="fa fa-youtube"></i></a></li>
+                        <li><a href="https://open.spotify.com/artist/3UqRgrDIQ208yNGiWKRMNt"><i class="fa fa-spotify"></i></a></li>
+                    </ul>
+                </div>
+                <div class="footer-bottom">
+                    <p>copyright &copy;2023 E&E Restaurant</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

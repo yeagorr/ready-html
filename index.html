@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Document</title>
+
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="shortcut icon" href="img/favicon.svg" type="image/svg+xml">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7b9fdfb84a.js" crossorigin="anonymous"></script>
+
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+
+	<script src="libs/gsap/gsap.min.js" defer></script>
+	<script src="libs/gsap/ScrollTrigger.min.js" defer></script>
+	<script src="libs/gsap/ScrollSmoother.min.js" defer></script>
+
+	<script src="js/app.js" defer></script>
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<div class="content">
+
+			<header>
+				<a ref="#" class="logo">E&E</a>
+				<ul id="navList">
+					<li><a href="#">Home</a></li>
+					<li><a href="reservation.html">Reservation</a></li>
+					<li><a href="menu.html">Menu</a></li>
+					<li class="dropdown" id="loggedInDropdown" style="display: none;">
+						<a href="#" id="loggedInLink"><span id="loggedInUser"></span></a>
+						<div class="dropdown-content">
+						  <a href="profile.html" id="profileLink">Профиль</a>
+						  <a href="#" id="logoutLink">Выйти из аккаунта</a>
+						</div> 	
+					</li>
+					<li><a class= "login-btn" id="loginBtn" href="#">Login</a></li>
+				</ul>
+			</header>
+			<section>
+				<div class="blur-bg-overlay"></div>
+				<div class="form-popup">
+					<span class="close-btn material-symbols-rounded">close</span>
+					<div class="form-box login">
+						<div class="form-details">
+							<h2>Welcome Back</h2>
+							<p>Please log in using your personal information to stay connected with us.</p>
+						</div>
+						<div class="form-content">
+							<h2>LOGIN</h2>
+							<form action="#">
+								<div class="input-field">
+									<input type="text"  id="loginInput">
+									<label>login</label>
+								</div>
+								<div class="input-field">
+									<input type="password"  id="passwordInput">
+									<label>Password</label>
+								</div>
+								<button type="submit" id="loginButton">Log In</button>
+							</form>
+							<div class="bottom-link">
+								Don't have an account?
+								<a href="#" id="signup-link">Signup</a>
+							</div>
+						</div>
+					</div>
+					<div class="form-box signup">
+						<div class="form-details">
+							<h2>Create Account</h2>
+							<p>To become a part of our service, please sign up using your personal information.</p>
+						</div>
+						<div class="form-content">
+							<h2>SIGNUP</h2>
+							<form action="#">
+								<div class="input-field">
+									<input type="text"  id="signupLoginInput">
+									<label>Enter your login</label>
+								</div>
+								<div class="input-field">
+									<input type="password" id="signupPasswordInput">
+									<label>Create password</label>
+								</div>
+								<div class="policy-text">
+									<input type="checkbox" id="policy">
+									<label for="policy">
+										I agree the 
+										<a href="#">Terms & Conditions</a>
+									</label>
+								</div>
+								<button type="submit" id="signupButton">Sign Up</button>
+							</form>
+							<div class="bottom-link">
+								Already have an account?
+								<a href="#" id="login-link">Login</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="layers__header">
+
+				</div>
+				<img src="/img/oliver-sjoberg-2hmmr-rmst4-unsplash22222.png" id="bground" class="layer">
+				<h2 id="text">Sea Howl</h2>
+				<a href="#sec" id="btn">Make an order</a>
+				<img src="/img/oliver-sjoberg-2hmmr-rmst4-unsplash.png" id="fground" class="layer">
+			</section>
+			<div class="separator"></div>
+			<div class="dishes" id="sec">
+				<div class="container">
+					<div class="dishes-title">Today's <span>Special</span></div>
+					<div class="dishes-grid">
+						<div class="burger-items">
+							<div class="burger-item">
+								<img src="img/menu-1.png" class="burger">
+								<div class="burger-text">Нейки суп ---------- 15 BYN</div>
+							</div>
+						</div>
+						<div class="burger-items">
+							<div class="burger-item">
+								<img src="img/menu-2.png" class="burger">
+								<div class="burger-text">Нейки суп ---------- 15 BYN</div>
+							</div>
+						</div>
+						<div class="burger-items">
+							<div class="burger-item">
+								<img src="img/menu-3.png" class="burger">
+								<div class="burger-text">Нейки суп ---------- 15 BYN</div>
+							</div>
+						</div>
+						<div class="burger-items">
+							<div class="burger-item">
+								<img src="img/menu-4.png" class="burger">
+								<div class="burger-text">Нейки суп ---------- 15 BYN</div>
+							</div>
+						</div>
+						<div class="burger-items">
+							<div class="burger-item">
+								<img src="img/menu-5.png" class="burger">
+								<div class="burger-text">Нейки суп ---------- 15 BYN</div>
+							</div>
+						</div>
+						<div class="burger-items">
+							<div class="burger-item">
+								<img src="img/menu-6.png" class="burger">
+								<div class="burger-text">Нейки суп ---------- 15 BYN</div>
+							</div>
+						</div>
+					</div>
+					<div class="dishes-bottom">
+						<a href="reservation.html" class="dishes-button">Book a table</a>
+					</div>
+				</div>
+			</div>
+			<div class="footer">
+				<div class="footer-content">
+					<h3>Come with family & feel the joy of mouthwatering food</h3>
+					<p>Join us in the social media to see more about our music</p>
+					<ul class="socials">
+						<li><a href="https://www.facebook.com/officialnapalmdeath/"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="https://www.instagram.com/theofficialnapalmdeath/"><i class="fa fa-instagram"></i></a></li>
+						<li><a href="https://twitter.com/officialND"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="https://www.youtube.com/@napalmdeathofficial"><i class="fa fa-youtube"></i></a></li>
+						<li><a href="https://open.spotify.com/artist/3UqRgrDIQ208yNGiWKRMNt"><i class="fa fa-spotify"></i></a></li>
+					</ul>
+				</div>
+				<div class="footer-bottom">
+					<p>copyright &copy;2023 E&E Restaurant</p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</body>
+</html>
